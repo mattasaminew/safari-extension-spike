@@ -16,5 +16,11 @@
     "electron-builder": "20.38.4",
     "electron-webpack": "^2.6.2",
     "webpack": "4.28.4"
+  },
+  "build": {
+    "appId": "com.yroo.Shopbrain-Desktop",
+    "mac": {
+      "extraFiles": ["PlugIns/"]
+    }
   }
 }

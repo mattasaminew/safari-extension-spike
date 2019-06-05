@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildMachineOSBuild</key>
+	<string>18E226</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Shopbrain Extension</string>
+	<key>CFBundleExecutable</key>
+	<string>Shopbrain Extension</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yroo.Shopbrain-Desktop.Shopbrain-Extension</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Shopbrain Extension</string>
+	<key>CFBundlePackageType</key>
+	<string>XPC!</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>10E1001</string>
+	<key>DTPlatformVersion</key>
+	<string>GM</string>
+	<key>DTSDKBuild</key>
+	<string>18E219</string>
+	<key>DTSDKName</key>
+	<string>macosx10.14</string>
+	<key>DTXcode</key>
+	<string>1020</string>
+	<key>DTXcodeBuild</key>
+	<string>10E1001</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.14</string>
+	<key>NSExtension</key>
+	<dict>
+		<key>NSExtensionPointIdentifier</key>
+		<string>com.apple.Safari.extension</string>
+		<key>NSExtensionPrincipalClass</key>
+		<string>Shopbrain_Extension.SafariExtensionHandler</string>
+		<key>SFSafariContentScript</key>
+		<array>
+			<dict>
+				<key>Script</key>
+				<string>script.js</string>
+			</dict>
+		</array>
+		<key>SFSafariToolbarItem</key>
+		<dict>
+			<key>Action</key>
+			<string>Command</string>
+			<key>Identifier</key>
+			<string>Button</string>
+			<key>Image</key>
+			<string>ToolbarItemIcon.pdf</string>
+			<key>Label</key>
+			<string>Your Button</string>
+		</dict>
+		<key>SFSafariWebsiteAccess</key>
+		<dict>
+			<key>Allowed Domains</key>
+			<array>
+				<string>*.amazon.com</string>
+			</array>
+			<key>Level</key>
+			<string>Some</string>
+		</dict>
+	</dict>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2019 Shopbrain. All rights reserved.</string>
+	<key>NSHumanReadableDescription</key>
+	<string>This is a Safari Extension. You should tell us what your extension does here.</string>
+</dict>
+</plist>
