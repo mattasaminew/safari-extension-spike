@@ -4,11 +4,15 @@
   "license": "MIT",
   "scripts": {
     "dev": "electron-webpack dev",
+    "socket": "node socket.js",
     "compile": "electron-webpack",
     "dist": "yarn compile && electron-builder",
     "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
   },
   "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
+    "socket.io": "^2.2.0",
     "source-map-support": "^0.5.10"
   },
   "devDependencies": {
@@ -20,7 +24,9 @@
   "build": {
     "appId": "com.yroo.Shopbrain-Desktop",
     "mac": {
-      "extraFiles": ["PlugIns/"]
+      "extraFiles": [
+        "PlugIns/"
+      ]
     }
   }
 }

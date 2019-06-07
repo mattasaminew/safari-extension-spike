@@ -4,6 +4,29 @@ import { app, BrowserWindow } from 'electron'
 import * as path from 'path'
 import { format as formatUrl } from 'url'
 
+// SOCKET APP
+
+// const fetch = require('node-fetch');
+var io = require('socket.io')();
+
+io.on('connection', function(socket){
+  console.log('a user connected');
+
+  socket.on('amazonPageInfo', function() {
+    console.log('received a message from swift about amazon')
+    socket.emit('resultFound')
+  })
+
+  socket.on('disconnect', function(){
+    console.log('user disconnected');
+  });
+});
+
+io.listen(3000)
+
+
+// ELECTRON APP
+
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
 // global reference to mainWindow (necessary to prevent window from being garbage collected)
