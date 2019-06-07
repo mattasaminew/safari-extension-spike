@@ -3,18 +3,18 @@
 import { app, BrowserWindow } from 'electron'
 import * as path from 'path'
 import { format as formatUrl } from 'url'
+import { searchExtractor } from './extractor';
 
 // SOCKET APP
 
-// const fetch = require('node-fetch');
 var io = require('socket.io')();
 
 io.on('connection', function(socket){
   console.log('a user connected');
 
-  socket.on('amazonPageInfo', function() {
-    console.log('received a message from swift about amazon')
-    socket.emit('resultFound')
+  socket.on('amazonPageInfo', function(data) {
+    console.log('received a message from swift about amazon', data)
+    searchExtractor(data.itemName, socket)
   })
 
   socket.on('disconnect', function(){
