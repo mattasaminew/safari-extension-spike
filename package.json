@@ -10,7 +10,7 @@
     "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
   },
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "jsdom": "^15.1.1",
     "node-fetch": "^2.6.0",
     "socket.io": "^2.2.0",
